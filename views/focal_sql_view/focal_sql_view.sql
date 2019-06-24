@@ -1,0 +1,1 @@
+select id from databases union select id from [parent_sql_view]

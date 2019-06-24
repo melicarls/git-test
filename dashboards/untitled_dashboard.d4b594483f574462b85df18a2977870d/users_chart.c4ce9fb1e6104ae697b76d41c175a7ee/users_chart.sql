@@ -1,0 +1,1 @@
+select created_at, email_address from users where [created_at=daterange]

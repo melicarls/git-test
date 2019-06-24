@@ -1,0 +1,1 @@
+select spend, created_at from ad_spend where [created_at=test_date] order by created_at

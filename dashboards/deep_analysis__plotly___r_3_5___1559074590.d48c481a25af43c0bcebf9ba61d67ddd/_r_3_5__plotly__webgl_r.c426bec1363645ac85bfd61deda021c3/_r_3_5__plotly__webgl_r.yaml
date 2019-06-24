@@ -1,0 +1,12 @@
+chart_type: Code Image
+code_language: R3.5
+database_name: PeriscopeSpine_development
+display_name: '[R 3.5] plotly__webgl.R'
+limit_preview:
+  rows: 1
+position:
+  left: 0
+  top: 0
+size:
+  height: 10
+  width: 10

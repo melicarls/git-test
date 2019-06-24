@@ -1,0 +1,12 @@
+chart_type: Code Image
+code_language: python3.7
+database_name: PeriscopeSpine_development
+display_name: '[python 3.7] py_animation_example.py'
+limit_preview:
+  rows: 1
+position:
+  left: 30
+  top: 10
+size:
+  height: 10
+  width: 10

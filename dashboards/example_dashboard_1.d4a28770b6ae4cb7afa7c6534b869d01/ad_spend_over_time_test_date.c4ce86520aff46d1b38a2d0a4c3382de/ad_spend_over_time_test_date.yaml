@@ -1,0 +1,10 @@
+chart_type: Area
+database_name: example_database
+display_name: Ad Spend Over Time Test_Date
+encrypted_definition: ym9niLJusvI8P8SxzsitViv0kzvJ5n2HVS3o6jzkExpYGbZGSBy+pesU3UM6oFw4F6r4Xm9YX4VDZ2Zu9oMExjl03r4CgKfyF1TtJT/7K/tFYtiIE5wVAyL4vJMeqBxnbcJ018bqhv0DddH50nGMSc431TbKtleIfID7XIM6UZIyLB9O+bqlcBKN2F0HMl3kEo7MzYMs3uV7IGB4hQ4dUvjpEP3vCJ8udHwKaC0nx0a1ASMiS13aT2Q+i5hUZksRrGEvTCM33nvz+HvqCUHQrbIZOKJj7CWgAzaUTMAHZKuOwvX1DrFg8VytymLClNXFuLGczYWxAdzLpSeitmIwv97gRIhQE0hoRyWXO6ZgMmLgF056W8u0HvXuUPTRzDEFh62x7M534jFu+OrDkHTuyw==
+position:
+  left: 0
+  top: 0
+size:
+  height: 10
+  width: 20

@@ -1,0 +1,6 @@
+dashboard_preferences:
+  settings:
+    description: A beautiful new baby dashboard
+    owner: ""
+disable_filters: true
+display_name: Example Dashboard 3

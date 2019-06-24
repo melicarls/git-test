@@ -1,0 +1,8 @@
+dashboard_preferences:
+  settings:
+    owner: ""
+    tags:
+    - happy
+    - sad
+disable_filters: true
+display_name: My Starred Dashboard

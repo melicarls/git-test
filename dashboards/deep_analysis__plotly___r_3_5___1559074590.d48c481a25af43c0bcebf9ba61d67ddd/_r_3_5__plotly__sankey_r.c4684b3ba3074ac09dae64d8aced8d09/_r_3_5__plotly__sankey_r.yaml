@@ -1,0 +1,12 @@
+chart_type: Code Image
+code_language: R3.5
+database_name: PeriscopeSpine_development
+display_name: '[R 3.5] plotly__sankey.R'
+limit_preview:
+  rows: 1
+position:
+  left: 20
+  top: 10
+size:
+  height: 10
+  width: 10

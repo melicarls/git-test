@@ -1,0 +1,5 @@
+dashboard_preferences:
+  settings:
+    owner: ""
+disable_filters: true
+display_name: 'Deep Analysis (Plotly): python 3.7 + 1559074589'

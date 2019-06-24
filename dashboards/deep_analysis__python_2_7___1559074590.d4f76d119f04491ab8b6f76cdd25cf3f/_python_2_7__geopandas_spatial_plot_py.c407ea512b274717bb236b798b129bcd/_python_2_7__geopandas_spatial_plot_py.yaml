@@ -1,0 +1,12 @@
+chart_type: Code Image
+code_language: python2.7
+database_name: PeriscopeSpine_development
+display_name: '[python 2.7] geopandas_spatial_plot.py'
+limit_preview:
+  rows: 1
+position:
+  left: 0
+  top: 50
+size:
+  height: 10
+  width: 10

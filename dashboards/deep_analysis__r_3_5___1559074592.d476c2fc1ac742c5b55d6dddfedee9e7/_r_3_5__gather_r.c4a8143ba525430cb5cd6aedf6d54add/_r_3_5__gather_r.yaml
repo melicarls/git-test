@@ -1,0 +1,12 @@
+chart_type: Code Text
+code_language: R3.5
+database_name: PeriscopeSpine_development
+display_name: '[R 3.5] gather.R'
+limit_preview:
+  rows: 1
+position:
+  left: 0
+  top: 220
+size:
+  height: 10
+  width: 10

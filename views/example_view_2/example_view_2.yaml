@@ -1,0 +1,6 @@
+Database Name: PeriscopeCustomer_test
+Settings:
+  Materialize View: true
+  Metadata:
+    Description: A beautiful new baby SQL view
+    Owner: ""

@@ -1,0 +1,7 @@
+dashboard_preferences:
+  settings:
+    owner: ""
+    tags:
+    - happy
+disable_filters: true
+display_name: My Recent Dashboard

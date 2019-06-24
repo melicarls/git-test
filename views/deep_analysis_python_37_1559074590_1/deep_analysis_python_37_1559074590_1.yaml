@@ -1,0 +1,6 @@
+Database Name: PeriscopeSpine_development
+Settings:
+  Materialize View: true
+  Metadata:
+    Owner: admin@periscopedata.com
+code_language: python3.7

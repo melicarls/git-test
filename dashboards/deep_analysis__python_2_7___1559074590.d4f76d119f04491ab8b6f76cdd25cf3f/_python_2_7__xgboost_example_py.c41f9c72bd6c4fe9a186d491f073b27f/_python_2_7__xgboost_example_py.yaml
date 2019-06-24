@@ -1,0 +1,12 @@
+chart_type: Code Text
+code_language: python2.7
+database_name: PeriscopeSpine_development
+display_name: '[python 2.7] xgboost_example.py'
+limit_preview:
+  rows: 1
+position:
+  left: 0
+  top: 70
+size:
+  height: 10
+  width: 10

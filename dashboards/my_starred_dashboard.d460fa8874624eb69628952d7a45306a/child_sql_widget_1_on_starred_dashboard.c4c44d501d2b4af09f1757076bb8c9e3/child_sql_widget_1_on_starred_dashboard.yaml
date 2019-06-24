@@ -1,0 +1,11 @@
+chart_type: Table
+database_name: PeriscopeCustomer_test
+display_name: Child SQL Widget 1 on Starred Dashboard
+limit_preview:
+  rows: null
+position:
+  left: 0
+  top: 10
+size:
+  height: 10
+  width: 30
