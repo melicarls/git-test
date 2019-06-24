@@ -1,0 +1,1 @@
+select host from sites
