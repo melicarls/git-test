@@ -1,0 +1,12 @@
+chart_type: Table
+database_name: teradata
+display_name: Untitled Chart
+encrypted_definition: Qg8qvswep50gEl+N5cfYXBcrFmxWZMh6CYH6eYGrfKsbwkiAajfD5EUfVlwlbpd47x73staoXb/yEdEj+zfT/2itHP5w0dU2RvBaooGSmgO6FeJW9+TuH4soj7qdYWlplMatZwIf33SXN3q+xtmLoX+5YqTEFaxHNhuduzQAaNU=
+limit_preview:
+  rows: null
+position:
+  left: 0
+  top: 27
+size:
+  height: 10
+  width: 30
