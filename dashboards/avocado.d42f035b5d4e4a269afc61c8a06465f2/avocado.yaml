@@ -1,5 +1,5 @@
 dashboard_preferences:
   settings:
     owner: admin@periscopedata.com
-disable_filters: true
+disable_filters: false
 display_name: Avocado
