@@ -1,0 +1,1 @@
+select id, sale_date from mel.avocado where [sale_date=daterange] order by sale_date desc
