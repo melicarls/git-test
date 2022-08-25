@@ -1,0 +1,302 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: 28d49874-59ce-4009-ad6e-8be0cde4f388 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: asdfasdf
+  projectId: 121af4ec-a237-4e07-a717-9dc30265b17a # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Grid Test
+  timezone: null
+  codeLanguage: PYTHON
+  status:
+    name: Exploratory
+  categories:
+    - name: External
+    - name: Internal
+  castDecimalsDefault: false
+projectAssets: {}
+sharedAssets:
+  dataConnections:
+    - dataConnectionId: 036b4e4f-6d71-4038-9929-f267be96023a # Test Snowflake (snowflake)
+    - dataConnectionId: cc94e3b1-3bdb-4581-97e4-01d7e28ac899 # Barry Redshift (redshift)
+    - dataConnectionId: dbbde8c7-95b6-4acf-83d0-6988459bcf29 # Test MySQL (mysql)
+cells:
+  - cellId: 70bcb15f-c61a-4d4a-a33e-3d106ce0a72a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: |-
+        import pandas as pd
+        import seaborn as sns
+        import numpy as np
+  - cellId: 29ebb3f3-0eb2-44f2-8e31-635d69790f4c # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: INPUT
+    config:
+      inputType: BUTTON
+      name: input_3
+      outputType: BOOLEAN
+      options:
+        intent: none
+        icon: play
+        text: Run test
+      defaultValue: null
+  - cellId: f9e5e03e-c89d-41e9-9849-e0489e56de7a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: '"Hello Helloooooo World"'
+  - cellId: 5f877292-84f2-4b90-9dc2-30a15ea2329b # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: |-
+        hundo = 100
+        fitty = 50
+
+        import time
+        time.sleep(15)
+  - cellId: ada260d7-9b38-406f-9d6f-bf6143b5f207 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: INPUT
+    config:
+      inputType: MULTISELECT
+      name: input_2
+      outputType: LIST_STRING
+      options:
+        multiValueOptions:
+          - one
+          - two
+          - three
+          - four
+          - five
+          - six
+          - seven
+      defaultValue:
+        - one
+        - two
+        - three
+        - five
+        - six
+  - cellId: 72bded5a-82e1-4c7f-b33a-fe414f172434 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: INPUT
+    config:
+      inputType: DATE
+      name: input_1
+      outputType: DATETIME
+      options:
+        enableTime: true
+        showRelativeDates: true
+      defaultValue:
+        unit: MONTH
+        amount: 1
+        timezone: America/Los_Angeles
+        operation: AGO
+        displayName: 1 month ago
+  - cellId: cdd32c70-3264-49a4-81f0-266ebd2eac47 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: METRIC
+    config:
+      title: null
+      valueVariableName: hundo
+      showComparison: false
+      comparisonType: VALUE
+      comparisonVariableName: null
+      comparisonFormat: POSITIVE_NEGATIVE
+      comparisonLabel: ""
+      displayFormat: null
+  - cellId: 86b40b34-7575-440a-97bf-a764896a2081 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: MARKDOWN
+    config:
+      source: |-
+        # This is a markdown title
+
+        ## This is a subtitle
+
+        And this is a paragraph about nothing in particular. The text is just here to fill some space and experiment with text wrapping when there is a markdown cell in grid mode. I'm going to add this cell to my app and see how it looks!
+
+        Also, here's a link: [app.hex.tech](https://app.hex.tech)
+  - cellId: 7e44ad0f-2be7-4950-8779-b36179b46713 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: MARKDOWN
+    config:
+      source: |-
+        # marky mark down
+        And this is a paragraph about nothing in particular. The text is just here to fill some space and experiment with text wrapping when there is a markdown cell in grid mode. I'm going to add this cell to my app and see how it looks!
+  - cellId: f1c4d7c0-f066-442b-90bb-1d585f09dcfe # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: MARKDOWN
+    config:
+      source: |-
+        markie markie mark down
+
+        This is jason't paragraph
+
+        1) het 
+        1) hey
+        1) hey
+  - cellId: a46e7877-f704-4609-9b48-9b0ae0bd0387 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: MARKDOWN
+    config:
+      source: |-
+        # Big Big Markdown Big Big Markdown Big Big Markdown Big Big Markdown Big Big Markdown and it's WIIIIIIIIIIDDDDDEEEEEE
+
+        # Big Big Markdown
+
+        # Big Big Markdown
+
+        # Big Big Markdown
+  - cellId: db6f31bc-f363-46c6-b5ac-1e0af5d14351 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: |-
+        def convert_time(s):
+            h, m, s = map(int, s.split(':'))
+            return pd.to_timedelta(h, 'h') + pd.to_timedelta(m, 'm') + pd.to_timedelta(s, 's')
+  - cellId: db8d9624-a6fd-4b23-9c5d-74cc1994b54f # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: |-
+        marathon_data = pd.read_csv("https://raw.githubusercontent.com/jakevdp/marathon-data/master/marathon-data.csv",
+                           converters={'split':convert_time, 'final':convert_time})
+        marathon_data['split_sec'] = marathon_data['split'].view(int) / 1E9
+        marathon_data['final_sec'] = marathon_data['final'].view(int) / 1E9
+  - cellId: 3b204989-b38a-4997-8197-6233b0672baa # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Marathon finish times
+    cellType: CODE
+    config:
+      source: |-
+        with sns.axes_style('white'):
+            g = sns.jointplot(x="split_sec", y="final_sec", data=marathon_data, kind='hex')
+            g.ax_joint.plot(np.linspace(4000, 16000),
+                            np.linspace(8000, 32000), ':k')
+  - cellId: ad80d38e-27b5-49b6-a30f-6402743c845a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: TABLE_DISPLAY
+    config:
+      dataFrameVariableName: marathon_data
+      tableDisplayConfig:
+        pageSize: 12
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties:
+          - originalName: gender
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: age
+            renameTo: null
+            size: 120
+            wrapText: null
+            displayFormat: null
+          - originalName: split
+            renameTo: null
+            size: 120
+            wrapText: null
+            displayFormat: null
+          - originalName: final
+            renameTo: null
+            size: 120
+            wrapText: null
+            displayFormat: null
+          - originalName: final_sec
+            renameTo: null
+            size: 106
+            wrapText: null
+            displayFormat: null
+          - originalName: split_sec
+            renameTo: null
+            size: 120
+            wrapText: null
+            displayFormat: null
+  - cellId: 05531582-1f5a-46a2-9813-f3b4e2634bcb # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: |-
+        marathon_data['split_frac'] = 1 - 2 * marathon_data['split_sec'] / marathon_data['final_sec']
+
+        sns.kdeplot(marathon_data.split_frac[marathon_data.gender=='M'], label='men', shade=True)
+        sns.kdeplot(marathon_data.split_frac[marathon_data.gender=='W'], label='women', shade=True);
+  - cellId: 46e8b56e-ac64-4f7f-bcdc-43e54025b520 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: INPUT
+    config:
+      inputType: SLIDER
+      name: input_4
+      outputType: NUMBER
+      options: null
+      defaultValue: 0
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - type: CELL
+              cellId: f9e5e03e-c89d-41e9-9849-e0489e56de7a
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - type: CELL
+              cellId: 5f877292-84f2-4b90-9dc2-30a15ea2329b
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - type: CELL
+              cellId: cdd32c70-3264-49a4-81f0-266ebd2eac47
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 40
+          elements:
+            - type: CELL
+              cellId: 7e44ad0f-2be7-4950-8779-b36179b46713
+              height: null
+              showLabel: true
+        - start: 40
+          end: 80
+          elements:
+            - type: CELL
+              cellId: 86b40b34-7575-440a-97bf-a764896a2081
+              height: null
+              showLabel: true
+        - start: 80
+          end: 120
+          elements:
+            - type: CELL
+              cellId: f1c4d7c0-f066-442b-90bb-1d585f09dcfe
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - type: CELL
+              cellId: ad80d38e-27b5-49b6-a30f-6402743c845a
+              height: null
+              showLabel: true
