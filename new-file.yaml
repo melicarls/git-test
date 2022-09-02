@@ -1,0 +1,40 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: d3e156e5-b7d5-46bc-bca7-4078bc393897 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: af782515-7d37-4f1f-86be-13cbff0f21f2 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Label Test
+  timezone: null
+  codeLanguage: PYTHON
+  castDecimalsDefault: true
+projectAssets: {}
+sharedAssets: {}
+cells:
+  - cellId: e911e1f5-ae82-4589-80f9-698498f4e939 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: INPUT
+    config:
+      inputType: DROPDOWN
+      name: meaningful_name
+      outputType: STRING
+      options: null
+      defaultValue: null
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - type: CELL
+              cellId: e911e1f5-ae82-4589-80f9-698498f4e939
+              height: null
+              showLabel: true
