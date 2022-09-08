@@ -1,0 +1,29 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: 6c571eec-6402-4d25-85ef-5484c6bdd525 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: ea5c557b-99cc-4c2b-8d57-6cd8ed3b1963 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Hola Mundo
+  timezone: null
+  codeLanguage: PYTHON
+  castDecimalsDefault: true
+projectAssets: {}
+sharedAssets: {}
+cells:
+  - cellId: 372b6210-45c3-4f2b-a249-13dc9ed40d5e # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    cellType: CODE
+    config:
+      source: print("Hola mundo")
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows: []
