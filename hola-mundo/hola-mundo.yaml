@@ -1,6 +1,6 @@
 schemaVersion: 1
 meta:
-  sourceVersionId: 6c571eec-6402-4d25-85ef-5484c6bdd525 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 4a954638-29d4-4c5d-8c69-1ef57e2b6e08 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: ea5c557b-99cc-4c2b-8d57-6cd8ed3b1963 # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: Hola Mundo
@@ -14,7 +14,7 @@ cells:
     cellLabel: null
     cellType: CODE
     config:
-      source: print("Hola mundo")
+      source: print("Hola hola mundo")
 appLayout:
   fullWidth: false
   visibleMetadataFields:
