@@ -1,0 +1,577 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: 24bba655-8dd7-4c15-bf79-3753bdb112e1 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: null
+  projectId: 3dd5f123-3299-47a6-a029-6c6a2d325a16 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: KG Writeback Test
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: 3890092c-71cb-4015-84d4-faf4d0c29114 # Redshift Writeback (redshift)
+    - dataConnectionId: 5fc8636e-9fb6-4a81-8f55-494ecd5aa669 # Test BigQuery (slow - no storage API) (bigquery)
+    - dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111 # Test Postgres (postgres)
+    - dataConnectionId: d1218a58-b335-4cf1-b82a-bb7c394b9e2a # Public Demo Postgres (postgres)
+    - dataConnectionId: e73efc70-b0af-4d87-8760-e00a53c56dfc # dbt Server Test Account (snowflake)
+cells:
+  - cellType: DBT_METRIC
+    cellId: 2bf0dba1-f029-408c-bbdd-46fbff22808c # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataConnectionId: e73efc70-b0af-4d87-8760-e00a53c56dfc
+      resultVariableName: metric_result_2
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useRichDisplay: false
+      castDecimals: true
+      useNativeDates: false
+      tableDisplayConfig: null
+      selectedMetrics:
+        - a4525bd3-2389-44f4-99c0-9aeee0b8ef81 # customers 
+      selectedTimegrain: day
+      startDate: 2022-10-13T06:00:00.000Z
+      endDate: 2022-10-21T06:00:00.000Z
+      selectedDimensions:
+        - is_latest_customer_order
+      secondaryCalculations:
+        - args:
+            interval: 1
+            comparison_strategy: difference
+          function: period_over_period
+  - cellType: INPUT
+    cellId: 216f1694-a3a5-4a85-9163-c0c283384145 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: NUMERIC_INPUT
+      name: input_11
+      outputType: NUMBER
+      options: null
+      defaultValue: 0
+  - cellType: INPUT
+    cellId: 1ae58d19-bbfb-43f1-ae09-8c70efb2cd4e # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: TEXT_INPUT
+      name: input_12
+      outputType: STRING
+      options: null
+      defaultValue: ""
+  - cellType: CODE
+    cellId: 4ae77d2f-b6b2-42f8-b683-cea0de64c3df # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        import seaborn
+        foobar= seaborn.load_dataset('penguins')
+        foobar.head()
+  - cellType: WRITEBACK
+    cellId: abc84a2b-c510-4c8d-81df-7fe70d4425ac # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: test_schema_00183f47_3fa3_48cf_a008_c66f00019f18
+      tableName: foobar
+  - cellType: METRIC
+    cellId: 805c8c1d-8924-4b4a-bdf8-739da7838cdc # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Code 0
+    config:
+      title: null
+      valueVariableName: null
+      showComparison: false
+      comparisonType: null
+      comparisonVariableName: null
+      comparisonFormat: null
+      comparisonLabel: null
+      displayFormat: null
+  - cellType: SQL
+    cellId: a92b67f7-56e4-49d0-a938-c5e3c9ca95df # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: ""
+      dataFrameCell: false
+      dataConnectionId: e73efc70-b0af-4d87-8760-e00a53c56dfc
+      resultVariableName: dataframe
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      tableDisplayConfig: null
+  - cellType: WRITEBACK
+    cellId: ecc902a2-8d53-4f5e-b5d5-8a80d28a8801 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: true
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: test_schema_00183f47_3fa3_48cf_a008_c66f00019f18
+      tableName: hex_user_email
+  - cellType: WRITEBACK
+    cellId: 187c6068-5804-43e4-9836-fd0550b4dae8 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: null
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: null
+      tableName: null
+  - cellType: WRITEBACK
+    cellId: c69388d7-ca33-466b-9113-0ea475315bf0 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 3890092c-71cb-4015-84d4-faf4d0c29114
+      databaseName: testing
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: test_schema_0d352fe8_4289_44c1_a9ee_dbb5bf70fcf6
+      tableName: foobar
+  - cellType: PIVOT
+    cellId: d3a1db7c-ec0f-4c53-83ed-4304560b1278 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      castDecimals: true
+      enableCache: false
+      runOnSchedule: false
+      runOnLoad: false
+      dataframeName: foobar
+      resultVariable: pivot_result_2
+      pivotConfig:
+        rows:
+          - field: flipper_length_mm
+            fieldType: NUMBER
+        values: []
+        columns: []
+      tableDisplayConfig:
+        pageSize: 12
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties: []
+        columnOrdering: []
+  - cellType: MAP
+    cellId: 3d4b4aee-e24f-4df1-b7cc-5f6238c00541 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: 520
+      map:
+        theme: hex
+        layers:
+          - id: e2d9b7cb-796a-4e87-a19a-266ad61b627b
+            data:
+              coordinates:
+                system: latlng
+              dataFrameName: foobar
+            text:
+              size: 50
+              color:
+                - 17
+                - 20
+                - 24
+              anchor: middle
+              alignment: top
+              dataFrameColumn: flipper_length_mm
+            type: text
+            opacity: 0.6
+            visible: true
+            autoHighlight: true
+            tooltipDataFrameColumns: []
+  - cellType: CHART
+    cellId: 86d7e11f-7dd0-47c2-87eb-7ec4e36d0965 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      vegaSpec: null
+      selectedLayerIndex: 0
+      metadata: null
+      defaultInputTimezone: UTC
+  - cellType: PIVOT
+    cellId: f4924787-03d6-4df4-b6df-5fbbce08fead # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      castDecimals: true
+      enableCache: false
+      runOnSchedule: false
+      runOnLoad: false
+      dataframeName: foobar
+      resultVariable: pivot_result
+      pivotConfig:
+        rows:
+          - field: species
+        values:
+          - field: bill_length_mm
+            aggregation: SUM
+            nameOverride: bill_length_mm (sum)
+        columns:
+          - field: island
+      tableDisplayConfig:
+        pageSize: 12
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties: []
+        columnOrdering:
+          - ASC
+  - cellType: WRITEBACK
+    cellId: c89a6425-0aaf-43dd-9ece-3cccbd57eeaf # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: false
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: pg_catalog
+      tableName: foobarasdfasdfasdfasdfas
+  - cellType: WRITEBACK
+    cellId: 2bda207a-6b3b-401b-beac-afc9acb2898c # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: true
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: hex_timezone
+  - cellType: WRITEBACK
+    cellId: c6753dcc-caeb-4afa-9c1e-135048f45972 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: true
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: another test
+  - cellType: WRITEBACK
+    cellId: 1a05980b-86ee-4e6f-9615-de2ad1bf6549 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: true
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: testasdfasdfasdf
+  - cellType: WRITEBACK
+    cellId: e3b4b27e-db9e-4eb2-98e7-6751f8ccd1b5 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: foobarfadafadsf
+  - cellType: WRITEBACK
+    cellId: 1fbf8a55-7dc1-44ad-a35a-074921733888 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: null
+      dataConnectionId: null
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: null
+      tableName: null
+  - cellType: WRITEBACK
+    cellId: 1fa3fe61-b803-4af7-9c21-b23020dfcb8a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: true
+      overwrite: true
+      runInApp: false
+      runInLogicView: true
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: null
+  - cellType: WRITEBACK
+    cellId: 4905ac70-4b4f-4de1-b00e-a2fe8aeada89 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: false
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: foobar
+  - cellType: MARKDOWN
+    cellId: 0e2ffdb3-69ed-46a0-9486-027587c59a66 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: ""
+  - cellType: WRITEBACK
+    cellId: d8355085-d190-4106-9cc6-3da5548a2a37 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataframeName: foobar
+      dataConnectionId: 95b2199c-3a0f-44e5-abf3-be4bc1a0b111
+      databaseName: null
+      dynamicTableName: false
+      overwrite: true
+      runInApp: false
+      runInLogicView: false
+      runOnScheduledRun: false
+      schemaName: public
+      tableName: foobar
+  - cellType: CHART
+    cellId: caf745c2-67e4-4f3c-bae7-6b665e16a036 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      vegaSpec: null
+      selectedLayerIndex: 0
+      metadata: null
+      defaultInputTimezone: UTC
+  - cellType: DBT_METRIC
+    cellId: ce6795a6-7b07-49fc-b3e2-ac0a819572fd # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataConnectionId: e73efc70-b0af-4d87-8760-e00a53c56dfc
+      resultVariableName: metric_result
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useRichDisplay: false
+      castDecimals: true
+      useNativeDates: false
+      tableDisplayConfig: null
+      selectedMetrics: []
+      selectedTimegrain: null
+      startDate: null
+      endDate: null
+      selectedDimensions: []
+      secondaryCalculations: []
+  - cellType: INPUT
+    cellId: 04efb409-786d-4528-bd13-344574a11d5d # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: BUTTON
+      name: input_1
+      outputType: BOOLEAN
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: f2661f40-d2cd-45b0-a50f-be4bd501410b # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: CHECKBOX
+      name: input_2
+      outputType: BOOLEAN
+      options: null
+      defaultValue: false
+  - cellType: INPUT
+    cellId: ed1fcee7-b488-4806-88c6-d590d0608326 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: DATE
+      name: input_3
+      outputType: DATETIME
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: 98c28f32-deb0-485e-8d9d-b38bb57457ab # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: DATE
+      name: input_4
+      outputType: DATETIME
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: f29be5c2-cc41-45dd-bdae-f0bcc81fc750 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: DROPDOWN
+      name: input_5
+      outputType: STRING
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: cedfd542-b203-4f27-8c98-35993655c1cd # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: MULTISELECT
+      name: input_6
+      outputType: LIST_STRING
+      options: null
+      defaultValue: []
+  - cellType: INPUT
+    cellId: 765d1865-17bc-40bf-adec-e131726d9092 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: NUMERIC_INPUT
+      name: input_7
+      outputType: NUMBER
+      options: null
+      defaultValue: 0
+  - cellType: INPUT
+    cellId: 864b7957-d37b-4573-8de0-c4e83de7ce80 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: SLIDER
+      name: input_8
+      outputType: NUMBER
+      options:
+        min: 0
+        max: 10
+        step: 1
+      defaultValue: 0
+  - cellType: INPUT
+    cellId: 9240c07d-1a3f-4d49-aefa-7e963ed2b416 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: TABLE
+      name: input_9
+      outputType: DATA_FRAME
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: a4251045-7ec3-427c-b77b-b16c972d94fa # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      inputType: TEXT_INPUT
+      name: input_10
+      outputType: STRING
+      options: null
+      defaultValue: ""
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 216f1694-a3a5-4a85-9163-c0c283384145
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 4ae77d2f-b6b2-42f8-b683-cea0de64c3df
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: f4924787-03d6-4df4-b6df-5fbbce08fead
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: c6753dcc-caeb-4afa-9c1e-135048f45972
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 1a05980b-86ee-4e6f-9615-de2ad1bf6549
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: ce6795a6-7b07-49fc-b3e2-ac0a819572fd
+              height: null
+              showLabel: true
