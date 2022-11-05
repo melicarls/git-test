@@ -1,0 +1,65 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: d311e76c-eeea-4347-ad9e-aab9eab08574 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: e31aa559-7564-4ed4-a682-3eb075494951 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Untitled project
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections: []
+cells:
+  - cellType: CODE
+    cellId: deae2e17-70e9-416c-90f1-ba8360220f92 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: lone = 2
+  - cellType: SQL
+    cellId: 24fad903-bc27-4f4a-86c6-91aae2797b91 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: ""
+      dataFrameCell: false
+      dataConnectionId: null
+      resultVariableName: dataframe
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      tableDisplayConfig: null
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: deae2e17-70e9-416c-90f1-ba8360220f92
+              height: null
+              showLabel: true
