@@ -1,0 +1,125 @@
+schemaVersion: 1
+meta:
+  sourceVersionId: b37ed99d-d6b5-44cf-bd33-b3a79b227620 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: e3ca2e9f-d015-4eb9-a7fb-e20498c5eab5 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: melissa's cool test component
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: 5532da14-af66-4bfe-9e77-e2b90e1a33c7 # Demo Snowflake (snowflake)
+cells:
+  - cellType: SQL
+    cellId: 70a18fcb-29a2-4097-aa9e-bf520057af26 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select *
+        from demo_data.demos.superstore_dataset;
+      dataFrameCell: false
+      dataConnectionId: 5532da14-af66-4bfe-9e77-e2b90e1a33c7
+      resultVariableName: dataframe
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      tableDisplayConfig: null
+  - cellType: PIVOT
+    cellId: 532acc41-7e6e-4f8e-8b42-10677fb5041e # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Sales by state
+    config:
+      castDecimals: true
+      enableCache: false
+      runOnSchedule: false
+      runOnLoad: false
+      dataframeName: dataframe
+      resultVariable: sales_by_state
+      pivotConfig:
+        rows:
+          - field: STATE
+            fieldType: STRING
+        values:
+          - field: SALES
+            fieldType: NUMBER
+            aggregation: SUM
+        columns: []
+      tableDisplayConfig:
+        pageSize: 12
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties: []
+        columnOrdering: []
+  - cellType: FILTER
+    cellId: 444a6c85-d37a-42d5-a2f5-079f2cb77a5c # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Not california
+    config:
+      dataframeName: dataframe
+      resultVariable: not_california
+      filters:
+        filters:
+          - column: STATE
+            matchCase: true
+            operation:
+              op: NEQ
+              arg: California
+            columnType: STRING
+        operation: AND
+      filterType: KEEP
+      appMode: FULL_ACCESS
+      castDecimals: true
+      enableCache: false
+      runOnLoad: false
+      runOnSchedule: false
+      useQueryMode: false
+      useNativeDates: true
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 532acc41-7e6e-4f8e-8b42-10677fb5041e
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 444a6c85-d37a-42d5-a2f5-079f2cb77a5c
+              height: null
+              showLabel: true
