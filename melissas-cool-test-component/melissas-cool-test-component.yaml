@@ -1,6 +1,6 @@
 schemaVersion: 1
 meta:
-  sourceVersionId: b37ed99d-d6b5-44cf-bd33-b3a79b227620 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: eae4a55d-9473-4b0f-9e38-911b2188029e # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: e3ca2e9f-d015-4eb9-a7fb-e20498c5eab5 # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: melissa's cool test component
@@ -57,6 +57,11 @@ cells:
           - field: SALES
             fieldType: NUMBER
             aggregation: SUM
+            displayFormat:
+              format: NUMBER
+              currency: USD
+              columnType: NUMBER
+              numDecimalDigits: 2
         columns: []
       tableDisplayConfig:
         pageSize: 12
@@ -91,6 +96,40 @@ cells:
       runOnSchedule: false
       useQueryMode: false
       useNativeDates: true
+  - cellType: PIVOT
+    cellId: 30d3350f-a480-480a-837f-e96f79ff4c77 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Sales by state no ca
+    config:
+      castDecimals: true
+      enableCache: false
+      runOnSchedule: false
+      runOnLoad: false
+      dataframeName: not_california
+      resultVariable: sales_by_state_no_ca
+      pivotConfig:
+        rows:
+          - field: STATE
+            fieldType: STRING
+        values:
+          - field: SALES
+            fieldType: NUMBER
+            aggregation: SUM
+            displayFormat:
+              format: NUMBER
+              currency: USD
+              columnType: NUMBER
+              numDecimalDigits: 2
+        columns: []
+      tableDisplayConfig:
+        pageSize: 12
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties: []
+        columnOrdering: []
 appLayout:
   fullWidth: false
   visibleMetadataFields:
