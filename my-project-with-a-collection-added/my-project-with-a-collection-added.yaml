@@ -1,9 +1,9 @@
 schemaVersion: 2
 meta:
-  sourceVersionId: 53c1179d-8e12-4917-95e1-6ae88e44af1e # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 19898367-9f27-4f13-820d-328b8dd6bd67 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: 71a99696-2e11-4d21-91d2-efc282cf6d55 # DO NOT CHANGE - Unique ID of the project from which this file was generated
-  title: my project with a collection added
+  title: my project with a big collection 
   timezone: null
   appTheme: SYS_PREF
   codeLanguage: PYTHON
