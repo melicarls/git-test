@@ -1,0 +1,97 @@
+schemaVersion: 2
+meta:
+  sourceVersionId: 53c1179d-8e12-4917-95e1-6ae88e44af1e # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: 71a99696-2e11-4d21-91d2-efc282cf6d55 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: my project with a collection added
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status:
+    name: Production
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections: []
+cells:
+  - cellType: INPUT
+    cellId: 6bc13236-fff9-44d7-9409-96ba79652b87 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: run button
+    config:
+      inputType: BUTTON
+      name: run_button
+      outputType: BOOLEAN
+      options: null
+      defaultValue: null
+  - cellType: INPUT
+    cellId: 1138bd3a-8bcb-4500-a7f4-9687c31c854e # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: text input option
+    config:
+      inputType: TEXT_INPUT
+      name: text_input_option
+      outputType: STRING
+      options: null
+      defaultValue: ""
+  - cellType: TEXT
+    cellId: 7686ef50-1a59-46f8-b018-227396df586f # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: paragraph
+          children:
+            - text: ""
+  - cellType: CODE
+    cellId: 0123c4c8-eefe-4f87-b665-d8e200170ce3 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: print(text_input_option),
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  rows:
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 6bc13236-fff9-44d7-9409-96ba79652b87
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 1138bd3a-8bcb-4500-a7f4-9687c31c854e
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 0123c4c8-eefe-4f87-b665-d8e200170ce3
+              height: null
+              showLabel: true
