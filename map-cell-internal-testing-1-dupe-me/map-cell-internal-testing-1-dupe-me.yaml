@@ -1,6 +1,6 @@
-schemaVersion: 1
+schemaVersion: 2
 meta:
-  sourceVersionId: ec9f28a3-c953-4ff7-ae3c-5608092d635d # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: d1afad69-ad06-4f32-83e0-ea000ee103b9 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: DUPLICATE ME! ---- this is an example project used for internal map cell testing
   projectId: 74de4487-588b-4254-bc34-8717e42201d2 # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: Map Cell Internal Testing 1 (dupe me!)
@@ -24,6 +24,7 @@ sharedAssets:
     - dataConnectionId: 5532da14-af66-4bfe-9e77-e2b90e1a33c7 # Demo Snowflake (snowflake)
     - dataConnectionId: 5b63b532-12fa-4088-8711-7afd9133d8e3 # Demo Database (redshift)
     - dataConnectionId: e73efc70-b0af-4d87-8760-e00a53c56dfc # dbt Server Test Account (snowflake)
+  externalFileIntegrations: []
 cells:
   - cellType: INPUT
     cellId: 9a629681-d21b-4c54-9d7e-a19f5f33651b # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
@@ -79,8 +80,10 @@ cells:
     cellLabel: null
     config:
       dataFrameVariableName: ""
+      resultVariable: table_result
       tableDisplayConfig:
         pageSize: 12
+        height: null
         hideIcons: false
         hideIndex: false
         defaultSortColumn: null
@@ -90,6 +93,7 @@ cells:
         filters: null
         columnProperties: []
         columnOrdering: null
+        pinnedColumns: null
   - cellType: SQL
     cellId: 220ca4c5-ec4a-40bf-b863-4157671481c5 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
     cellLabel: null
@@ -101,14 +105,12 @@ cells:
       dataFrameCell: false
       dataConnectionId: 5b63b532-12fa-4088-8711-7afd9133d8e3
       resultVariableName: dataframe
-      enableCache: false
-      runOnLoad: false
-      runOnSchedule: false
       useRichDisplay: false
       sqlCellOutputType: PANDAS
       useQueryMode: false
       castDecimals: true
       useNativeDates: false
+      outputFilteredResult: false
       allowDuplicateColumns: true
       tableDisplayConfig: null
   - cellType: CODE
@@ -145,14 +147,12 @@ cells:
       dataFrameCell: true
       dataConnectionId: null
       resultVariableName: query_result
-      enableCache: false
-      runOnLoad: false
-      runOnSchedule: false
       useRichDisplay: false
       sqlCellOutputType: PANDAS
       useQueryMode: false
       castDecimals: true
       useNativeDates: false
+      outputFilteredResult: false
       allowDuplicateColumns: true
       tableDisplayConfig: null
   - cellType: MAP
@@ -177,9 +177,6 @@ cells:
                 - - 255
                   - 255
                   - 255
-                - - 17
-                  - 20
-                  - 24
                 - - 17
                   - 20
                   - 24
@@ -210,6 +207,7 @@ cells:
               dataFrameColumn: name
             series:
               - id: 5a63b530-3943-49d1-b3ca-c7e1ce6f9dc3
+                type: bar
                 axis:
                   type: string
                   style:
@@ -218,20 +216,19 @@ cells:
                     ticks: {}
                     labels: {}
                   aggregate: count
-                type: bar
+                dataFrameColumns:
+                  - code
+                colorOrder: ascending
                 color:
                   type: static
-                layout: grouped
                 opacity:
                   type: static
                   value: 1
                 tooltip:
                   type: auto
                 barWidth: 1
-                colorOrder: ascending
                 orientation: vertical
-                dataFrameColumns:
-                  - code
+                layout: grouped
             dataFrame: bart_data
         settings:
           legend:
@@ -240,6 +237,7 @@ cells:
           selectionEnabled: false
       chartSelection: {}
       resultVariable: filter_result_2
+      displayTableConfig: null
 appLayout:
   fullWidth: false
   visibleMetadataFields:
