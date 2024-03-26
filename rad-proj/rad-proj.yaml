@@ -1,17 +1,20 @@
 schemaVersion: 3
 meta:
-  sourceVersionId: 52ba2b24-082a-4d45-bf53-72baf19d6efd # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 44c9ff1c-a540-4245-925f-9feb0345ad5d # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: a52520d8-cdab-4267-9e0f-196164066347 # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: Rad Proj
   timezone: null
   appTheme: SYS_PREF
   codeLanguage: PYTHON
-  status: null
-  categories: []
+  status:
+    name: Exploratory
+  categories:
+    - name: Internal
   castDecimalsDefault: true
   logicQueryCacheTimeout: null
   publishedQueryCacheTimeout: null
+  hexType: PROJECT
 projectAssets:
   dataConnections: []
   envVars: []
@@ -29,7 +32,7 @@ cells:
       richText:
         - type: paragraph
           children:
-            - text: Hello world!
+            - text: Hello world!!
   - cellType: TEXT
     cellId: 431171e4-7950-48f0-9291-7e7640cb32f8 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
     cellLabel: null
