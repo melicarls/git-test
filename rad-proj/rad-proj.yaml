@@ -1,20 +1,29 @@
 schemaVersion: 3
 meta:
-  sourceVersionId: 44c9ff1c-a540-4245-925f-9feb0345ad5d # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
-  description: ""
+  sourceVersionId: d41b4034-77a2-4a72-b36c-760fa081060e # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: |-
+    The published metadata and draft metadata of this project diverge. The published version is called "Published Title" and has the status "Production" and categories "External" and "Internal."
+
+    The draft version is called "Draft Title" and has the status "In Progress" and category "Template."
   projectId: a52520d8-cdab-4267-9e0f-196164066347 # DO NOT CHANGE - Unique ID of the project from which this file was generated
-  title: Rad Proj
+  title: Published Title
   timezone: null
   appTheme: SYS_PREF
   codeLanguage: PYTHON
   status:
-    name: Exploratory
+    name: Production
   categories:
+    - name: External
     - name: Internal
   castDecimalsDefault: true
   logicQueryCacheTimeout: null
   publishedQueryCacheTimeout: null
   hexType: PROJECT
+  allowExecutionReordering: true
+  prerunApp: false
+  cachePublishedAppState: true
+  refreshStalePublishedApp: false
+  autoRerunApp: true
 projectAssets:
   dataConnections: []
   envVars: []
