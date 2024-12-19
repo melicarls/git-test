@@ -1,6 +1,6 @@
 schemaVersion: 2
 meta:
-  sourceVersionId: db811d0c-f6b4-478f-a974-ccedc3b338db # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 9f3575db-c99d-40bb-a5e5-eedb0c44ca05 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: 74771578-1d84-436a-aa40-b074e91c653e # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: git sync repro for ben
@@ -25,7 +25,9 @@ cells:
     cellId: ace0e137-edc4-4ecf-81ad-34b6478265f2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
     cellLabel: null
     config:
-      source: print('hi')
+      source: |-
+        print('hi')
+        print('hi again')
 appLayout:
   fullWidth: false
   visibleMetadataFields:
