@@ -1,0 +1,219 @@
+schemaVersion: 3
+meta:
+  sourceVersionId: f405408e-bc18-4dcb-b3c6-444b31aaa37f # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: null
+  projectId: 8f6836c0-2833-4367-8497-47411576bdfa # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Hello Demo!!!!
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+  hexType: PROJECT
+  allowExecutionReordering: true
+  prerunApp: false
+  cachePublishedAppState: true
+  refreshStalePublishedApp: false
+  autoRerunApp: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: 87d34a2f-7632-4979-8d3b-ebaf921d5e3c # [Not Restricted] Snowflake EPD Test Account (snowflake)
+  externalFileIntegrations: []
+cells:
+  - cellType: TEXT
+    cellId: 3d769635-4826-4bb5-95db-f5a5e04941f9 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: paragraph
+          children:
+            - text: Hi I'm a text cell!!!
+  - cellType: SQL
+    cellId: 10c6383f-2bbe-4fbb-9b33-55722e1e3ab3 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: select * from "DEMO_DATA"."ATREIDES"."DAILY_SPICE_PRODUCTION_COSTS" limit 100
+      dataFrameCell: false
+      dataConnectionId: 87d34a2f-7632-4979-8d3b-ebaf921d5e3c
+      resultVariableName: dataframe_2
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: CREATED_DATE
+            renameTo: null
+            size: 137
+            wrapText: null
+            displayFormat: null
+          - originalName: INT64_FIELD_0
+            renameTo: null
+            size: 139
+            wrapText: null
+            displayFormat: null
+          - originalName: PRODUCTION_COST_PER_G
+            renameTo: null
+            size: 205
+            wrapText: null
+            displayFormat: null
+          - originalName: SHIPPING_COST_PER_G
+            renameTo: null
+            size: 186
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: CHARTV2
+    cellId: b34dfe0f-bc8a-4323-8b49-af16776f4709 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: e6adb7f6-bbaf-4277-a749-5ca9d7163b25
+            xAxis:
+              type: datetime
+              style:
+                grid:
+                  style: solid
+                ticks: {}
+                labels: {}
+              dataFrameColumn: CREATED_DATE
+            series:
+              - id: 80525935-d693-40c2-ac92-2bf0934690da
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: solid
+                    ticks: {}
+                    labels: {}
+                  aggregate: sum
+                dataFrameColumns:
+                  - PRODUCTION_COST_PER_G
+                colorOrder: ascending
+                color:
+                  type: static
+                opacity:
+                  type: static
+                  value: 1
+                tooltip:
+                  type: auto
+                barWidth: 1
+                orientation: vertical
+                layout: stacked
+            dataFrame: dataframe_2
+        settings:
+          legend:
+            position: right
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings: {}
+      resultVariable: chart_result
+      outputResult: false
+      displayType: CHART
+      displayTableConfig: null
+  - cellType: COLLAPSIBLE
+    cellId: 6a23245d-5627-47df-8861-da8f58e34e2c # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Section 6
+    config:
+      labelStyle: AUTO
+      cells:
+        - cellType: INPUT
+          cellId: 2a5edeee-fd5c-4769-a87c-ad490f2d4397
+          cellLabel: null
+          config:
+            inputType: DATE
+            name: input_1
+            outputType: DATETIME
+            options: null
+            defaultValue: null
+        - cellType: CODE
+          cellId: 79b60221-a628-4ac6-9fce-907c082e6453
+          cellLabel: null
+          config:
+            source: print(input_1)
+appLayout:
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  fullWidth: false
+  tabs:
+    - name: Tab 1
+      rows:
+        - columns:
+            - start: 0
+              end: 120
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: 3d769635-4826-4bb5-95db-f5a5e04941f9
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
+        - columns:
+            - start: 0
+              end: 60
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: b34dfe0f-bc8a-4323-8b49-af16776f4709
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
+            - start: 60
+              end: 120
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: 2a5edeee-fd5c-4769-a87c-ad490f2d4397
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
+sharedFilters: []
